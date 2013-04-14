@@ -1,9 +1,10 @@
 objects = server.o
 headers = 
 binary = gccraftbukkit
+CPPFLAGS = -g
 
 $(binary): $(objects) 
-	g++ -o $@ $(objects) -l boost_system
+	g++ -g -o $@ $(objects) -l boost_system
 
 $(objects): $(headers)
 
