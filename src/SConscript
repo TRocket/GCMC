@@ -1,0 +1,7 @@
+env = Environment()  # Initialize the environment
+env.Append(LIBS = ['SDL','GL'])
+env.Append(CCFLAGS = '-fprofile-arcs -ftest-coverage')
+env.Append(LINKFLAGS = '-fprofile-arcs -ftest-coverage')
+gitv = Environment(CCFLAGS = '-fprofile-arcs -ftest-coverage -D__GIT_VERSION=\\"none\\"')
+#gitv.Object("gnucraft.cpp")
+env.Program(target = 'gcmc', source = ["server.cpp"])

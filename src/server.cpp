@@ -104,7 +104,7 @@ int main(){
 	    	  port = read_int(socket);
 	    	  cout << port << endl;
 
-	    	  //write_byte(socket, 0xFD);
+	    	  write_byte(socket, 0xFD);
 	    	  write_string(socket, "GCMC");
 	    	  write_short(socket, 5);
 	    	  write_byte(socket, 0xA);write_byte(socket, 0xB);write_byte(socket, 0xC);write_byte(socket, 0xD);write_byte(socket, 0xE);
